@@ -1,4 +1,4 @@
-# Install Magento 2
+# Install Magento 2.4 For Windows 10
 
 ## Get Keys
 
@@ -126,7 +126,9 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 > php magento cache:flush
 
 
-## Change Symlink (Not Required)
+## Change di.xml For Styles
+
+> https://magento.stackexchange.com/questions/97209/magento-2-css-and-javascript-not-loading-from-correct-folder
 
 > C:\xampp\htdocs\magento\pro2\vendor\magento\framework\View\Element\Template\File\app\etc\di.xml
 
@@ -146,8 +148,8 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 ```
 <arguments>
     <argument name="strategiesList" xsi:type="array">
-        <item name="view_preprocessed" xsi:type="object">Magento\Framework\App\View\Asset\MaterializationStrategy\Symlink</item>
-        <item name="default" xsi:type="object">Copy</item>
+        <item name="view_preprocessed" xsi:type="object">Magento\Framework\App\View\Asset\MaterializationStrategy\Copy</item>
+        <item name="default" xsi:type="object">Magento\Framework\App\View\Asset\MaterializationStrategy\Copy</item>
     </argument>
 </arguments>
 ```
@@ -155,5 +157,27 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 > php magento cache:flush
 
 > php magento setup:di:compile
+
+> php magento cache:flush
+
+
+# Install Sample Data
+
+> cd bin
+
+> https://devdocs.magento.com/guides/v2.4/install-gde/install/sample-data-after-magento.html
+
+> php magento sampledata:deploy
+
+> php magento setup:upgrade
+
+
+# Module urn and Registration
+
+> php magento dev:urn-catalog:generate .
+
+> php magento module:enable MY_MODULE
+
+> php magento setup:upgrade
 
 > php magento cache:flush

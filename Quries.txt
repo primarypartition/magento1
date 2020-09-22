@@ -1,0 +1,7 @@
+# Module query
+
+> select * from setup_module where module = "Mastering_SampleModule";
+
+> delete from setup_module where module = "Mastering_SampleModule";
+
+> select * from mastering_sample_item;
