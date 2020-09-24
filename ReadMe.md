@@ -172,7 +172,7 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 > php magento setup:upgrade
 
 
-# Module urn and Registration
+# Module
 
 > php magento dev:urn-catalog:generate .
 
@@ -181,3 +181,9 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 > php magento setup:upgrade
 
 > php magento cache:flush
+
+> php magento 
+
+> php magento mastering:item:add "another item" "item desc"
+
+> php magento cron:run
