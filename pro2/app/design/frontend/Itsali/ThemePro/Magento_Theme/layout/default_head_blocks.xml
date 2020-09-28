@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/custom.css" rel="stylesheet" type="text/css" />
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" src_type="url" />
+
+        <link src="https://fonts.googleapis.com/css2?family=Roboto:wght@100" src_type="url" />
+    </head>
+</page>

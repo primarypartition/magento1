@@ -187,3 +187,13 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 > php magento mastering:item:add "another item" "item desc"
 
 > php magento cron:run
+
+
+# Theme
+
+> php magento cache:flush
+
+> reload admin page
+
+> {{block class="Magento\Cms\Block\Block" block_id="home-page-block"}}
+
