@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>          
+        <referenceContainer name="header.panel.wrapper" remove="true">        
+        </referenceContainer>
+
+        <referenceContainer name="top.search" remove="true">        
+        </referenceContainer>
+
+        <move element="header" destination="header-wrapper" before="minicart-wrapper" />
+ 
+ 		<referenceContainer name="form.subscribe" remove="true" />
+ 	
+        <referenceContainer name="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">                
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links-2">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>    
+            
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="privacy-policy-link">
+	            <arguments>
+	                <argument name="label" xsi:type="string" translate="true">Privacy and Cookie Policy</argument>
+	                <argument name="path" xsi:type="string">privacy-policy-cookie-restriction-mode</argument>
+	            </arguments>
+            </block>           
+        </referenceContainer>
+        
+    </body>
+</page>

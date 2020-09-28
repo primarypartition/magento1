@@ -197,3 +197,5 @@ $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
 
 > {{block class="Magento\Cms\Block\Block" block_id="home-page-block"}}
 
+> <p>{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="14"}}</p>
+
