@@ -23,4 +23,21 @@
             </argument>
         </arguments>
     </virtualType>
+    <virtualType name="MasteringLogger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="name" xsi:type="string">main</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Magento\Framework\Logger\Handler\System</item>
+                <item name="debug" xsi:type="object">Mastering\SampleModule\Model\DebugHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Mastering\SampleModule\Observer\Logger">
+        <arguments>
+            <argument name="logger" xsi:type="object">MasteringLogger</argument>
+        </arguments>
+    </type>
+    <type name="Mastering\SampleModule\Console\Command\AddItem">
+        <plugin name="console_logging" type="Mastering\SampleModule\Plugin\Logger"/>
+    </type>
 </config>
